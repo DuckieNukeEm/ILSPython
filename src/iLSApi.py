@@ -56,32 +56,6 @@ class IowaLiquorSalesAPI:
             query += "{} in ({}) and".format(
                 K, ",".join([f"'{v}'" for v in params.get(K)])
             )
-        """if start_date:
-            query += "date >= '{}' and ".format(start_date)
-        if end_date:
-            query += "date <= '{}' and ".format(end_date)
-        if store_numbers:
-            query += "store_number in ({}) and ".format(
-                )
-            )
-        if invoice_numbers:
-            query += "invoice_number in ({}) and ".format(
-                ",".join([f"'{v}'" for v in invoice_numbers])
-            )
-        if cities:
-            query += "city in ({}) and ".format(",".join([f"'{v}'" for v in cities]))
-        if zip_codes:
-            query += "zip_code in ({}) and ".format(
-                ",".join([f"'{v}'" for v in zip_codes])
-            )
-        if product_ids:
-            query += "item_number in ({}) and ".format(
-                ",".join([f"'{v}'" for v in product_ids])
-            )
-        if vendor_ids:
-            query += "vendor_number in ({}) and ".format(
-                ",".join([f"'{v}'" for v in vendor_ids])
-            )"""
 
         # Remove trailing "and" from query
         query = query[:-5]
