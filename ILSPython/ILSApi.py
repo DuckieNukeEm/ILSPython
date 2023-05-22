@@ -84,6 +84,7 @@ class IowaLiquorSalesAPI:
 
         # Remove trailing "and" from query
         query = query[:-5]
+        print(query)
         logging.info(f"query_sales: query string: {query}")
 
         # Retrieve records with query
@@ -95,4 +96,4 @@ class IowaLiquorSalesAPI:
         if return_results:
             return results
         else:
-            self.client = self.client + results
+            self.results = results
